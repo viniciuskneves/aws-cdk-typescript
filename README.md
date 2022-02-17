@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project!
+# AWS CDK v2 Typescript template
 
-This is a blank project for TypeScript development with CDK.
+This template is an opinionated template on top of AWS CDK v2 default Typescript template.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+It adds:
+- Linting through ESLint with Prettier and Typescript;
+- Git hooks through Husky (before commit and before push);
+- CI/CD through GitHub Actions;
+- Node 14 as default through `.nvmrc` and `tsconfig.json`;
+- Dependabot to update dependencies (NPM and Actions);
 
-## Useful commands
+**Rename files, especially the stack file, in order to bring a better naming to your project.**
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Available commands
+
+- `npm test`: runs Jest
+- `cdk:synth`: shorthand to `cdk synth`
+- `cdk:deploy`: shorthand to `cdk deploy --all`
+- `lint`: runs ESLint with some configuration
+- `lint:fix`: same as `lint` but `--fix` is applied
