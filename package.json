@@ -6,6 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
+    "cdk:synth": "cdk synth",
+    "cdk:deploy": "cdk deploy --all",
     "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix"
   },
